@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import type {ResportaPadraoMsg} from '../../../types/RespostaPadraoMsg';
+import type {RespostaPadraoMsg} from '../../../types/RespostaPadraoMsg';
 import type {CadastroRequisicao} from '../../../types/CadastroRequisicao';
 import {UsuarioModel} from '../../../models/UsuarioModel';
 import { conectarMongoDB } from "../../../middlewares/conectaMongoDB";
@@ -9,7 +9,7 @@ import {} from '../../../middlewares/conectaMongoDB';
 import md5 from "md5";
 
 const endpointCadastro = 
-    async (req : NextApiRequest, res : NextApiResponse<ResportaPadraoMsg>) => {
+    async (req : NextApiRequest, res : NextApiResponse<RespostaPadraoMsg>) => {
 
     if(req.method === 'POST') {
         const usuario = req.body as CadastroRequisicao;
